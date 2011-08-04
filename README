@@ -2,6 +2,9 @@ AES Rijndael Utility
 written by Eric Bakan
 12/12/10
 
+This software is released under the GPL "as-is" without any warranty.
+Copyright (C) 2010 by Eric Bakan.
+
 How to compile:
     cd aes
     make
