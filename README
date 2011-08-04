@@ -1,0 +1,40 @@
+AES Rijndael Utility
+written by Eric Bakan
+12/12/10
+
+How to compile:
+    cd aes
+    make
+
+Usage (also available by calling `AES -h`):
+    To use this utility, use the following flags:
+    -b Key size in bits: 128, 192, 256
+        Alternate:
+            -bits NUM
+            --buts=NUM
+    -k Key file location
+        Alternate:
+            -key key File
+            --key=KEY (value in hex, no separators, a la "01020304")
+
+    Select a mode of operation:
+    -e Encrypt File
+        Alternate:
+            -encrypt
+    -d Decrypt File
+        Alternate:
+            -decrypt
+    -c Combined Encrypt and Decrypt File
+        Alternate:
+            -combined
+
+    -o Output file name (Flag optional, will default to stdout. Will be ignored if -c flag set, in which case program will write out to 'foo'.encrypted and 'foo'.decrypted)
+        Alternate:
+            -output FILENAME
+
+    Input file handling:
+    If no input file is selected, the program will default to stdin
+    Otherwise choose one of the following:
+        -i FILE
+        -input FILE
+        --input=KEY (value in hex, no separators, a la "01020304")
