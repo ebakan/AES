@@ -21,15 +21,17 @@ char* byteArrayToHexString(uint8_t* bytes, int len) {
     for(int i=0;i<len;i++) {
         //first char
         tmp=bytes[i]/16;
-        if(tmp>9)
+        if(tmp>9) {
             tmp+=39;
         out[i*2]=48+tmp;
+        }
 
         //second char
         tmp=bytes[i]%16;
-        if(tmp>9)
+        if(tmp>9) {
             tmp+=39;
         out[i*2+1]=48+tmp;
+        }
     }
     return out;
 }
